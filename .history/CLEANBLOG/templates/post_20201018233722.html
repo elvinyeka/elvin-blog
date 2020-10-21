@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content%}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{url_for('static', filename = 'img/post-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>{{post.title}}</h1>
+                    <h2 class="subheading">{{post.subtitle}}</h2>
+                    <span class="meta">Posted by
+              <a href="#">{{post.user.name}}</a>
+              on  {{post.post_date.strftime('%B, %d, %Y')}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because
+                    every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr> {% endblock%}
